@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#3399ff"
+    tools:context=".ui.MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"></WebView>
+
+        <!-- Bar -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#99ccff">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/about"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="#fff"
+                android:text="About"
+                android:background="#3399ff"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Akonet mobile"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:padding="7dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- Items -->
+        <RelativeLayout
+            android:id="@+id/items_list_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#ff8"
+                    android:layout_margin="10dp"
+                    android:text="Your ISP is" />
+
+                <TextView
+                    android:id="@+id/my_isp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_margin="10dp"
+                    android:textColor="#fff"
+                    android:textSize="20sp"
+                    android:text="Loading.." />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/items_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/loading_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#fff"
+                android:text="Loading.."
+                android:gravity="center"
+                android:textSize="30sp"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/about_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_overlay"
+            android:padding="10dp"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/about_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#fff"
+                android:text="Akonet mobile client by SUMERIAN APPS based on akonet.info\nvisit us at \nfacebook.com./sumerian.apps\nalso visit Akonet for more info on your ISP at\nakonet.info\n\nGreat thanks to SNONO SYSTEMS at \nsnono-systems.com"
+                android:gravity="center"
+                android:textSize="20sp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>
